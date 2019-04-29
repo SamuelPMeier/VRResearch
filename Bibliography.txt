@@ -1,0 +1,15 @@
+Websites:
+http://lazyfoo.net/tutorials/SDL/index.php
+http://headerphile.com/sdl2/opengl-part-1-sdl-opengl-awesome/
+https://wiki.libsdl.org/CategoryAPI
+https://www.khronos.org/opengl/wiki/Main_Page
+https://www.cs.utexas.edu/~fussell/courses/cs354-spring2015/lectures/lecture10.pdf
+http://www.opengl-tutorial.org/
+
+Files:
+
+
+
+Videos:
+
+

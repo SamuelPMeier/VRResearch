@@ -1,0 +1,53 @@
+Things to install:
+	https://www.libsdl.org/download-2.0.php
+		Download the Development Library for your system and preferred Environment. 
+	https://sourceforge.net/projects/glew/files/glew/2.1.0/
+		This is GLEW, a wrangler library for OpenGL, basically only used to mitigate damage from older OpenGL installs.
+	https://github.com/g-truc/glm/releases/download/0.9.9.0/glm-0.9.9.0.zip
+		This is GLM, a vector Mathematics library for OpenGL.
+	https://steamcdn-a.akamaihd.net/client/installer/SteamSetup.exe
+		Download and install steam.
+		you will also need to set up an account here https://store.steampowered.com/join/?redir=about%2F
+	https://github.com/ValveSoftware/openvr/archive/master.zip
+		This is OpenVR, Valve's semi open source VR library
+
+Installation for VS:
+	SDL:
+		Unzip SDL-devel-2.0.8-VC.zip
+		Copy contents of SDL2-2.0.8 to C:\SDL2
+		Copy SDL2.dll from C:\SDL2\lib\x64 to C:\windows\sysWOW64 and C:\windows\system32
+		
+	GLEW:
+		Unzip glew-2.1.0-win32.zip
+		Copy contents of glew-2.1.0 to C:\GLEW
+		Copy glew32.dll from C:\GLEW\bin\Release\x64 to C:\windows\sysWOW64 and C:\windows\system32
+	GLM:
+		Unzip GLM-0.9.9.0.zip
+		Copy glm to C:\SDL2\include
+	OpenVR:
+		unzip openvr-master
+		Copy contents of openvr-master to C:\openvr
+		Copy openvr_api.lib from C:\openvr\bin\win64 to C:\windows\sysWOW64 and C:\windows\system32
+		
+	For new projects:
+		There is a drop menu on the second tool bar down from the top that says x86, change that to x64
+		Project -> Properties.
+		Click on 'VC++ Directories' in the left sidebar.
+		Click 'Include Directories' in the right panel, then click the down arrow on the far right, then <edit>.
+		Click the new Directory button at the top (The folder with a light) copy and paste this line.
+			C:\GLEW\include;C:\SDL2\include;C:\openvr\headers
+		Click OK.
+		
+		Next, click 'Library Directories' in the same panel, the far right arrow, then <edit>.
+		Click the new folder tab again, copy and paste this line.
+			C:\GLEW\lib\Release\x64;C:\SDL2\lib\x64;C:\openvr\lib\win64
+		Click OK.
+		
+		Next, in the sidebar, double click 'Linker', then click 'Input' from the following dropdown menu.
+		Click 'Additional Dependencies' in the right panel, then the down arrow on the far right, then <edit>.
+		copy and paste the following line into the top box.
+		
+			SDL2.lib;SDL2main.lib;opengl32.lib;glew32.lib;openvr_api.lib;
+			
+		Click OK.
+		Click OK.
